@@ -1,0 +1,10 @@
+/*
+!.gitignore
+.htaccess
+readme.html
+license.txt
+!wp-content/
+wp-content/
+!wp-content/themes/
+wp-content/themes/*
+!wp-content/themes/mythems/
