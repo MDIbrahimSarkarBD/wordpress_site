@@ -18,8 +18,10 @@ wp-content/*
 
 wp-content/themes/index.php
 !wp-content/themes/
-wp-content/themes/*
-!wp-content/themes/mythems/
+wp-content/themes/test/*
+
+
+!wp-content/themes/mythems
 
 
 
