@@ -1,10 +1,29 @@
+# Ignore everything by default
 /*
+
+# Except for these specific files and directories
 !.gitignore
 .htaccess
 readme.html
 license.txt
+
+# Allow wp-content directory and its contents
 !wp-content/
-wp-content/
+wp-content/*
+
+# Exclude wp-includes and wp-admin
+wp-content/*
+
+# Allow wp-content/themes directory and its contents
+
 !wp-content/themes/
-wp-content/themes/*
-!wp-content/themes/mythems/
+
+
+
+
+# Allow everything under wp-content/themes except mythems
+
+
+
+# Allow everything under wp-content/themes/mythems
+
