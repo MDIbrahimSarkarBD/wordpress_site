@@ -1,0 +1,132 @@
+Required Files
+style.css
+index.php
+
+Optional Files
+README.txt
+functions.php
+screenshort.png
+theme.json
+package.json
+
+assts/ css/
+assts/ images/
+assts/ js
+inc/
+parts/
+patterns/
+styles/
+templates/
+
+// functions.php about
+
+/*
+-------------------------------------------including css
+(
+    front-end stylesheets
+        wp_enqueue_style('is_bosy_css', get_stylesheet_uri() )
+        wp_enqueue_style('is_bosy_css', get_parent_theme_file_uri( '/assets/css/body.css' ) ,array() , '1.0.0', 'all');
+        wp_get_theme()->get('Version');
+    inline style (ইনলাইনের পাইয়োরিটি আগে)
+        wp_add_inline_style($handel_name, 'body{backgrount: red;}' )
+    Editor style
+    Block stylesheets
+)
+
+-------------------------------------------including JavaScript
+
+(
+    front-end JavaScript
+        wp_footer();
+        wp_enqueue_script(
+            "main_js",
+            get_template_directory_uri()."/assets/js/main.js",
+            array(),
+            wp_get_theme()->get('Version'),
+            true
+
+        )
+    inline JavaScript 
+        wp_add_inline_script('main_js', 
+            'console.log("Allah all time hepl us")';
+        );
+    Editor JavaScript
+    Wordpress Default Script
+)
+
+this video form learing
+https://www.youtube.com/watch?v=-Kz96WzAFtg&list=PLX7CHjb-dXZDbyo-nR08fgU7K89NiG7yo&index=14
+including images 
+    esc_url()
+    // suggestion by start
+        get_theme_file_uri();
+        get_parent_theme_file_uri();
+    // suggestion by end
+        get_template_directory_uri();
+
+    <img src="<?php echo esc_url(get_theme_file_uri('assets/images/file.jpg'))";
+    <img src="<?php echo esc_url(get_parent_theme_file_uri('assets/images/file.jpg'))";
+
+
+including Fonts
+    
+
+
+
+add_action('after_setup_theme', 'is_theme_customize');
+
+if (!function_exists('is_theme_customize')) {
+    
+    function is_theme_customize(){
+
+        // Afet setup theme thumbnails suppots
+        //add_theme_support('post-thumbnails');
+
+        add_theme_support('post-thumbnails', array('post', 'service','page'));
+
+    }
+}
+
+Mustaring
+// index.php Files
+wp_head();
+wp_footer();
+get_header();
+get_footer();
+get_sitebar();
+header-top.php
+get_header('top');
+get_template_part('pages/custompage');
+get_template_part('pages/custompage', 'video');
+get_permalink();
+
+_e("text any", "text_domain"); wp suggestion not write hardcode 
+
+// post loop 
+have_posts()
+while(have_posts()): the_post();
+
+<h1><?php the_title();?></h1>
+<?php the_content(); ?>
+
+
+
+endwhile;
+endif;
+
+the_category();
+the_author();
+the_excerpt();
+the_ID();
+the_mata();
+the_time();
+
+wp_Query{} class stady 
+
+
+
+ 
+
+
+
+
