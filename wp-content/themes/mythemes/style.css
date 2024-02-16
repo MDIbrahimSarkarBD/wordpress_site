@@ -14,9 +14,7 @@ Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, feature
 */
 
 body{
-    background: red;
+    background: rgb(161, 124, 124);
 
 }
-h1{
-    background-color: aqua;
-}
+

@@ -98,6 +98,7 @@ header-top.php
 get_header('top');
 get_template_part('pages/custompage');
 get_template_part('pages/custompage', 'video');
+get_template_directory();
 get_permalink();
 
 _e("text any", "text_domain"); wp suggestion not write hardcode 
@@ -122,6 +123,10 @@ the_mata();
 the_time();
 
 wp_Query{} class stady 
+
+
+load_theme_textdomain('learnwp', get_template_directory().'/languages');
+add_theme_support('post-formates', array('aside', 'gallery', 'quate', 'image', 'video'))
 
 
 

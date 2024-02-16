@@ -10,13 +10,16 @@
 add_action( 'wp_enqueue_scripts', 'is_enqueue_styles' );
 
 function is_enqueue_styles()  {
-   // wp_enqueue_style("is_main_css", get_stylesheet_uri());
+    wp_enqueue_style("is_wp_css", get_stylesheet_uri());
 
    // custom add css
-  wp_enqueue_style('is_bosy_css', get_parent_theme_file_uri( '/assets/css/body.css' ) ,array() , '1.0.0', 'all');
-  wp_add_inline_style( 'is_bosy_css', 'body { background: #895; }');
-
+  wp_enqueue_style('is_body_css', get_parent_theme_file_uri( '/assets/css/body.css?t='. time() ) ,array() , '1.0.0', 'all');
+  wp_enqueue_style('is_menu_css', get_parent_theme_file_uri( '/assets/css/menu.css?t='. time() ) ,array() , '1.0.0', 'all');
+//   wp_add_inline_style( 'is_bosy_css', 'body { background: #895; }');
+// Enqueue jQuery
+    wp_enqueue_script('jquery');
   wp_enqueue_script('is_main_script', get_theme_file_uri( 'assets/js/main.js?t='. time()), array(), '1.0.0' );
+    
 }
 
 // Afet setup theme thumbnails suppots
